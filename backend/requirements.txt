@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-dateutil
+python-Levenshtein
+requests
+dnspython
+python-whois
+tldextract
+cryptography
+idna
+httpx

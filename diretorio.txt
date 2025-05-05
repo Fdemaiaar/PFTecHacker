@@ -1,0 +1,23 @@
+phish-guard/
+├── backend/                # FastAPI mínimo (pronto p/ B)
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── main.py         # API v1
+│   │   └── detectors/
+│   │       ├── __init__.py
+│   │       └── heuristics.py
+│   │       ├── whois_check.py         # idade do domínio + registrante
+│   │       ├── ssl_check.py           # emissor, expiração, CN vs. host
+│   │       ├── dns_dyn_check.py       # detecta serviços DynDNS
+│   │       ├── similarity.py          # Levenshtein c/ marcas
+│   │       └── redirects.py           # segue até 3 hops e marca suspeitos
+│   ├── requirements.txt
+│   └── tests/
+│       └── test_heuristics.py
+├── web/                    # UI básica (HTML + JS puro)
+│   ├── index.html
+│   └── js/app.js
+├── data/                   # dumps PhishTank/OpenPhish (cron)
+├── docs/                   # imagens, especificação
+├── .gitignore
+└── README.md
