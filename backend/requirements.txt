@@ -9,3 +9,8 @@ tldextract
 cryptography
 idna
 httpx
+scikit-learn
+pandas
+joblib
+playwright
+pillow
