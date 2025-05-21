@@ -62,3 +62,6 @@ backend/app/ml/model.joblib
 # ─── Sistema operacional ─────────────────────────────────────────
 .DS_Store
 Thumbs.db
+
+
+data/phishtank.csv
