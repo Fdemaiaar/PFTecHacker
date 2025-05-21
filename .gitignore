@@ -3,69 +3,46 @@
 env/
 venv/
 
-# ─── Cache Python / build ─────────────────────────────────────────
+# ─── Cache / build Python ─────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 *.so
 *.egg-info/
-.build/
-dist/
-.eggs/
-MANIFEST
-
-# pytest
 .pytest_cache/
-
-# coverage
-htmlcov/
-.coverage
-coverage.xml
-
-# mypy / Ruff
 .mypy_cache/
 .ruff_cache/
+htmlcov/
 
-# ─── Playwright ───────────────────────────────────────────────────
-# downloads de navegadores (~200 MB)
+# ─── Playwright / Node ────────────────────────────────────────────
+node_modules/
 playwright/.cache/
-# trace-viewer
 playwright-report/
 
-# ─── Node / front-end (caso use npm) ──────────────────────────────
-node_modules/
-npm-debug.log*
-yarn-error.log*
-
-# ─── IDE / Editor ────────────────────────────────────────────────
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# ─── Arquivos gerados pelo app ───────────────────────────────────
-media/shots/              # screenshots PNG gerados
+# ─── Datasets ─────────────────────────────────────────────────────
+datasets/                # ignora a pasta inteira…
+!datasets/tranco_top1m.csv   # …mas **mantém** estes dois arquivos
+!datasets/phishtank.csv
+# derivados grandes
 datasets/train.csv
-datasets/phishtank.csv
-backend/app/ml/model.joblib
+datasets/*.parquet
 
-# logs
+# ─── Modelos e artefatos ──────────────────────────────────────────
+backend/app/ml/model.joblib
+media/shots/              # screenshots gerados
 *.log
 *.tmp
 
-# ─── Docker / CI artefacts ───────────────────────────────────────
+# ─── Binários / pacotes ───────────────────────────────────────────
 *.tar
-*.gz
+*.tar.gz
+*.tar.bz2
+*.zip
 *.whl
 
-# ─── Sistema operacional ─────────────────────────────────────────
+# ─── IDE / SO ─────────────────────────────────────────────────────
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
-
-
-data/phishtank.csv
-
-.venv/
-datasets/
-*.tar.bz2
