@@ -1,6 +1,6 @@
 # PFTecHacker
 
-# PhishGuard – Detector de Phishing (B-grade)
+# PhishGuard – Detector de Phishing
 ## Ferramenta open-source para análise de URLs e geração de score de risco (0-100) combinando heurísticas tradicionais + modelo de machine learning treinado em 30 k amostras.
 ## Interface web em Bulma + Chart.js com histórico local, download de relatório e captura de screenshot da página.
 
