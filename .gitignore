@@ -1,52 +1,64 @@
-# —— Python ——————————————————————————
+# ─── Ambientes virtuais ───────────────────────────────────────────
+.venv/
+env/
+venv/
+
+# ─── Cache Python / build ─────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.pyc
-*.env
-.env
-.venv/
-env/
-venv/
-.Python
-# logs/tests
-*.log
-.cache/
-pytest_cache/
+*.so
+*.egg-info/
+.build/
+dist/
+.eggs/
+MANIFEST
 
-# virtual‑env package installs (pip‑tools, poetry lockfiles, wheels)
-*.whl
-pip-wheel-metadata/
+# pytest
+.pytest_cache/
 
-# —— FastAPI / Uvicorn reload artefacts ——
-*.pid
+# coverage
+htmlcov/
+.coverage
+coverage.xml
 
-# —— Node / Front‑end ——————————————————
-# (caso use npm / vite no futuro)
+# mypy / Ruff
+.mypy_cache/
+.ruff_cache/
+
+# ─── Playwright ───────────────────────────────────────────────────
+# downloads de navegadores (~200 MB)
+playwright/.cache/
+# trace-viewer
+playwright-report/
+
+# ─── Node / front-end (caso use npm) ──────────────────────────────
 node_modules/
 npm-debug.log*
-yarn-debug.log*
 yarn-error.log*
-dist/
-build/
 
-# —— Data dumps & generated reports ————
-data/*.csv
-*.json
-*.sqlite3
-exports/
-analise.json
-
-# —— IDE / Editor settings —————————
-.vscode/
+# ─── IDE / Editor ────────────────────────────────────────────────
 .idea/
-*.sublime*
+.vscode/
 *.swp
-*~ .sw?
+*.swo
+
+# ─── Arquivos gerados pelo app ───────────────────────────────────
+media/shots/              # screenshots PNG gerados
+datasets/train.csv
+datasets/phishtank.csv
+backend/app/ml/model.joblib
+
+# logs
+*.log
+*.tmp
+
+# ─── Docker / CI artefacts ───────────────────────────────────────
+*.tar
+*.gz
+*.whl
+
+# ─── Sistema operacional ─────────────────────────────────────────
 .DS_Store
 Thumbs.db
-
-# —— OS metadata ———————————————
-Icon?
-._*

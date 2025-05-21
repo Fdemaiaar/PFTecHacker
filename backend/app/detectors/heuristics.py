@@ -1,6 +1,6 @@
 import re, requests, csv, pathlib, datetime, urllib.parse as up
 
-BL_PATH = pathlib.Path("data/phishtank.csv")
+BL_PATH = pathlib.Path("datasets/tranco_top1m.csv")
 SUBDOMAIN_THRESH = 3          # “excessivo”
 DEF_CHARS = r"[^A-Za-z0-9\-./:]"
 

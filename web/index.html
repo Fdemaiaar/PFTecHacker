@@ -1,44 +1,83 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Phish‑Guard Dashboard</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  </head>
-  <body class="section">
-    <div class="container">
-      <h1 class="title">Phish‑Guard</h1>
-      <div class="tabs is-toggle">
-        <ul>
-          <li class="is-active" data-tab="check"><a>Verificar URL</a></li>
-          <li data-tab="history"><a>Histórico</a></li>
-        </ul>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <title>Phish-Guard</title>
+
+  <!-- Bulma + ícones -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <style>
+    .tag-risk.baixo {background:#e9f9ee;color:#23a455}
+    .tag-risk.medio {background:#fff7e6;color:#ff9f1a}
+    .tag-risk.alto  {background:#ffeaea;color:#f14668}
+
+    .flag-table td:first-child {width:60%;border-right:1px solid #f0f0f0}
+    .flag-table tr:nth-child(odd){background:#fafafa}
+
+    .i-ok   {color:#23a455}
+    .i-bad  {color:#f14668}
+    .shot-wrap{display:flex;justify-content:center}
+  </style>
+</head>
+<body class="section">
+
+  <h1 class="title has-text-centered">Phish-Guard</h1>
+
+  <div class="tabs is-toggle is-medium is-centered">
+    <ul>
+      <li class="is-active" data-tab="tab-check"><a>Verificar URL</a></li>
+      <li data-tab="tab-hist"><a>Histórico</a></li>
+    </ul>
+  </div>
+
+  <!-- Verificação -->
+  <div id="tab-check" class="tab-content">
+    <div class="field has-addons is-justify-content-center">
+      <div class="control is-expanded" style="max-width:600px">
+        <input id="url" class="input" placeholder="https://exemplo.com"/>
       </div>
-      <div id="check" class="tab-content">
-        <div class="field has-addons">
-          <input id="url" class="input" placeholder="https://exemplo.com">
-          <button id="btn" class="button is-link">Verificar</button>
-        </div>
-        <table class="table is-striped">
-          <tbody id="tbody"></tbody>
-        </table>
-      </div>
-      <div id="history" class="tab-content" style="display:none;">
-        <table class="table is-striped">
-          <thead>
-            <tr>
-              <th>URL</th>
-              <th>Score</th>
-              <th>Flags</th>
-            </tr>
-          </thead>
-          <tbody id="hist-body"></tbody>
-        </table>
-        <button id="export" class="button is-small">Exportar JSON</button>
-        <canvas id="pie" width="400" height="400"></canvas>
+      <div class="control">
+        <button id="btn" class="button is-primary">Verificar</button>
       </div>
     </div>
-    <script src="js/app.js"></script>
-  </body>
+
+    <table class="table is-striped is-fullwidth">
+      <thead><tr><th>URL</th><th class="has-text-centered">Score</th>
+      <th class="has-text-centered">Flags</th><th>Shot</th></tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <!-- Histórico -->
+  <div id="tab-hist" class="tab-content" style="display:none">
+    <div class="columns is-centered"><div class="column is-narrow">
+      <canvas id="pie" width="280" height="280"></canvas>
+    </div></div>
+    <table class="table is-striped is-fullwidth mt-4">
+      <thead><tr><th>URL</th><th class="has-text-centered">Score</th>
+      <th class="has-text-centered">Flags</th><th>Shot</th></tr></thead>
+      <tbody id="hist-body"></tbody>
+    </table>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="detailModal">
+    <div class="modal-background"></div>
+    <div class="modal-card" style="width:660px">
+      <header class="modal-card-head">
+        <p class="modal-card-title" id="modalTitle"></p>
+        <button class="delete" id="modalClose"></button>
+      </header>
+      <section class="modal-card-body" id="modalContent"></section>
+    </div>
+  </div>
+
+  <script src="js/app.js?v=7"></script>
+</body>
 </html>
