@@ -121,19 +121,7 @@ pytest -q
 
 flake8 (linter)
 ```
-
-### Roadmap
-✅ Conceito B completo (heurísticas, dashboard, histórico, gráficos).
-
-⏳ Plugin Firefox para verificação em tempo real (requisito Conceito A).
-
-⏳ Extra: análise de screenshots via visão computacional (SSIM contra sites legítimos).
-
-⏳ GeoIP + reputação IP (AbuseIPDB).
-
-Pull Requests são bem-vindos!
-
-
+---
 Dados derivados de:
 
 PhishTank © Cisco (Creative Commons – Attribution)
