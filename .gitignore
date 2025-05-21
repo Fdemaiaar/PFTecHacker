@@ -65,3 +65,7 @@ Thumbs.db
 
 
 data/phishtank.csv
+
+.venv/
+datasets/
+*.tar.bz2
