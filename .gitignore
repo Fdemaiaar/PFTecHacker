@@ -46,3 +46,14 @@ media/shots/              # screenshots gerados
 .idea/
 .DS_Store
 Thumbs.db
+# CSV original completo NÃO versionar
+datasets/phishtank.csv
+# CSV enxuto SIM versionar
+!datasets/phishtank_clean.csv
+
+# Dados phishing
+datasets/phishtank.csv          # bruto (IGNORAR)
+!datasets/phishtank_clean.csv   # limpo (versionar)
+
+# se quiser: ignora qualquer backup *.csv~
+*.csv~
