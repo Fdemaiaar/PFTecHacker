@@ -29,7 +29,6 @@ datasets/train.csv
 datasets/*.parquet
 
 # ─── Modelos e artefatos ──────────────────────────────────────────
-backend/app/ml/model.joblib
 media/shots/              # screenshots gerados
 *.log
 *.tmp
