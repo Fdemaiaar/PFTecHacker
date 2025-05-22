@@ -52,7 +52,6 @@ Acesse `http://localhost:9000` – cole uma URL, clique Testar e visualize:
 | API           | FastAPI `POST /api/v2/score` → `{ "url": "<URL>" }` → JSON com score, flags, screenshot |
 | Screenshot    | Playwright → PNG salvo em media/shots/<hash>.png |
 | Interface Web | Bulma + Chart.js; histórico em localStorage; modal detalhado; pizza Maliciosas × Seguras |
-| CI            | GitHub Actions com lint + pytest -q |
 
 ---
 
