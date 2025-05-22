@@ -3,7 +3,7 @@
 # PhishGuard – Detector de Phishing
 
 ## Ferramenta open-source para análise de URLs e geração de score de risco (0-100) combinando heurísticas tradicionais + modelo de machine learning treinado em 30k amostras.
-Interface web em Bulma + Chart.js com histórico local, download de relatório e captura de screenshot da página.
+Interface web com histórico local e captura de screenshot da página.
 
 ---
 
@@ -52,7 +52,6 @@ Acesse `http://localhost:9000` – cole uma URL, clique Testar e visualize:
 | API           | FastAPI `POST /api/v2/score` → `{ "url": "<URL>" }` → JSON com score, flags, screenshot |
 | Screenshot    | Playwright → PNG salvo em media/shots/<hash>.png |
 | Interface Web | Bulma + Chart.js; histórico em localStorage; modal detalhado; pizza Maliciosas × Seguras |
-| CI            | GitHub Actions com lint + pytest -q |
 
 ---
 
@@ -67,7 +66,7 @@ Acesse `http://localhost:9000` – cole uma URL, clique Testar e visualize:
 **Passos**
 
 ```bash
-git clone https://github.com/<seu-user>/PhishGuard.git
+git clone https://github.com/Fdemaiaar/PFTecHacker.git
 cd PhishGuard
 python -m venv .venv
 source .venv/bin/activate
