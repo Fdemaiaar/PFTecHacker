@@ -66,7 +66,7 @@ Acesse `http://localhost:9000` – cole uma URL, clique Testar e visualize:
 **Passos**
 
 ```bash
-git clone https://github.com/<seu-user>/PhishGuard.git
+git clone https://github.com/Fdemaiaar/PFTecHacker.git
 cd PhishGuard
 python -m venv .venv
 source .venv/bin/activate
