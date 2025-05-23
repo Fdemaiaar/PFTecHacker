@@ -22,7 +22,7 @@ Interface web com histórico local e captura de screenshot da página.
 ### Demonstração rápida
 
 ```bash
-git clone https://github.com/<seu-user>/PhishGuard.git
+git clone https://github.com/Fdemaiaar/PFTecHacker.git
 cd PhishGuard
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
