@@ -22,8 +22,8 @@ Interface web com histórico local e captura de screenshot da página.
 ### Demonstração rápida
 
 ```bash
-git clone https://github.com/<seu-user>/PhishGuard.git
-cd PhishGuard
+git clone https://github.com/Fdemaiaar/PFTecHacker.git
+cd PFTecHacker
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn backend.app.main:app --reload   # API + captura de screenshot
@@ -67,7 +67,7 @@ Acesse `http://localhost:9000` – cole uma URL, clique Testar e visualize:
 
 ```bash
 git clone https://github.com/Fdemaiaar/PFTecHacker.git
-cd PhishGuard
+cd PFTecHacker
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt         # FastAPI, Playwright, scikit-learn…
