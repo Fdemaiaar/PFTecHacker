@@ -23,7 +23,7 @@ Interface web com histórico local e captura de screenshot da página.
 
 ```bash
 git clone https://github.com/Fdemaiaar/PFTecHacker.git
-cd PhishGuard
+cd PFTecHacker
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn backend.app.main:app --reload   # API + captura de screenshot
